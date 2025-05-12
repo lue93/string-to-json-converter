@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>br.com.ungaratto93.lib</groupId>
+  <groupId>br.com.lue93.lib</groupId>
   <artifactId>string-to-json-converter</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
@@ -31,7 +31,7 @@
       <distributionManagement>
          <repository>
           <id>github</id>
-          <name>GitHub ungaratto93 Apache Maven Packages</name>
+          <name>GitHub lue93 Apache Maven Packages</name>
           <url>https://maven.pkg.github.com/lue93/string-to-json-converter</url>
          </repository>
     </distributionManagement>
