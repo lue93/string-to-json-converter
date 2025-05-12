@@ -32,7 +32,7 @@
          <repository>
           <id>github</id>
           <name>GitHub ungaratto93 Apache Maven Packages</name>
-          <url>https://maven.pkg.github.com/ungaratto93/string-to-json-converter</url>
+          <url>https://maven.pkg.github.com/lue93/string-to-json-converter</url>
          </repository>
     </distributionManagement>
 </project>
