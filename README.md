@@ -56,7 +56,7 @@ Detalhes:
 | **Facilidade de uso**                  | Alta, abstrai validações e conversões         | Média, exige controle manual                 | Média, exige configuração e mapeamento      |
 | **Integração com Maven**               | Sim, com dependência própria (`br.com.ungaratto93.lib`) | Sim, via `com.google.code.gson`             | Sim, via `com.fasterxml.jackson.core`       |
 | **Flexibilidade para estratégias**     | Sim, permite injeção de estratégias de validação | Não                                          | Não                                         |
-
+| Flexibilidade para novos conversores| Sim, permite extensão da classe Converter   | Limitado, exige reimplementação manual       | Limitado, exige criação de wrappers         |
 
 ## ⚠️ Alerta
 - Tratamento de Erros: A biblioteca lança exceções como JsonParseException ao encontrar entradas inválidas. Certifique-se de tratar essas exceções adequadamente.
