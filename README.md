@@ -46,6 +46,18 @@ Detalhes:
 - O método from(JsonObject jsonObject) converte um objeto JSON para um Map<String, JsonElement>.
 - A biblioteca inclui tratamento de exceções para strings JSON nulas ou vazias.
 
+
+| Característica                         | string-to-json-converter                      | Gson (uso puro)                              | Jackson ObjectMapper                        |
+|---------------------------------------|-----------------------------------------------|----------------------------------------------|---------------------------------------------|
+| **Conversão de String para JsonObject** | Sim, via `converter.from(String)`             | Sim, via `JsonParser.parseString()`          | Sim, via `ObjectMapper.readTree()`          |
+| **Conversão de JsonObject para Map**   | Sim, via `converter.from(JsonObject)`         | Manual, exige iteração sobre JsonObject      | Sim, via `ObjectMapper.convertValue()`      |
+| **Validação de entrada JSON**          | Sim, com estratégia de verificação (`GsonCheckStrategy`) | Parcial, depende do uso de try/catch        | Sim, lança exceções detalhadas              |
+| **Tratamento de erros**                | Lança `JsonParseException` para entradas inválidas | Lança `JsonSyntaxException`                 | Lança `JsonProcessingException`             |
+| **Facilidade de uso**                  | Alta, abstrai validações e conversões         | Média, exige controle manual                 | Média, exige configuração e mapeamento      |
+| **Integração com Maven**               | Sim, com dependência própria (`br.com.ungaratto93.lib`) | Sim, via `com.google.code.gson`             | Sim, via `com.fasterxml.jackson.core`       |
+| **Flexibilidade para estratégias**     | Sim, permite injeção de estratégias de validação | Não                                          | Não                                         |
+
+
 ## ⚠️ Alerta
 - Tratamento de Erros: A biblioteca lança exceções como JsonParseException ao encontrar entradas inválidas. Certifique-se de tratar essas exceções adequadamente.
 
